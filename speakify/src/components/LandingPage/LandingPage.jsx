@@ -1,12 +1,16 @@
 import React from 'react';
 import './LandingPage.css';
+import { Link } from "react-router-dom"; 
 
 function LandingPage() {
   return (
     <div className="container">
       <h1 className="title">Mi sitio web</h1>
       <p className="description">¡Bienvenido a mi sitio web!</p>
-      <button className="button">Ver más</button>
+      <Link to="/home">
+        <button className="button" Link >Ver más</button>
+      </Link>
+      
     </div>
   );
 }
