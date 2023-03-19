@@ -8,7 +8,7 @@ function LandingPage() {
       <h1 className="title">Mi sitio web</h1>
       <p className="description">¡Bienvenido a mi sitio web!</p>
       <Link to="/home">
-        <button className="button" Link >Ver más</button>
+        <button className="button" >Ver más</button>
       </Link>
       
     </div>
