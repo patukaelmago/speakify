@@ -21,14 +21,22 @@
   font-size: 1.2rem;
   color: #fff;
   background-color: #0077ff;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none !important;
 }
 
 .button:hover {
-  background-color: #005eff;
+  background-color: #0069d9;
 }
+
+.language {
+  margin-top: 2em;
+  font-size: 0.9rem;
+}
+button {
+  width: 160px;
+}
+

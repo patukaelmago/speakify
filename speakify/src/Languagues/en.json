@@ -1,0 +1,7 @@
+{
+  "description": "Welcome to Speakify web site!",
+  "learnMoreButton": "Learn more",
+  "h1Text":"Text-to-Speech (TTS) synthesis with JavaScript",
+  "textConvert":"Write the text you want to convert to audio:",
+  "talkButton": "talk"
+}
