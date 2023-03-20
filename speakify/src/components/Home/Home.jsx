@@ -20,18 +20,6 @@ export default function Home(props) {
     synthesis.speak(habla);}
     })
   };
-  /* let voz = new SpeechSynthesisUtterance();
-  voz.lang="es-ES";
-  voz.volume=1;
-  let timer = setInterval(function(){
-    let voices = speechSynthesis.getVoices();
-    if (voices.length!=0) {
-      voz.voice=voices[0];
-      voz.voiceURI=voices[0].voiceURI;
-      clearInterval(timer);
-    }
-    console.log(voices);
-  },1000); */
 
   return (
     <div>
