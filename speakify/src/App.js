@@ -12,7 +12,7 @@ function App() {
   
   return (
     <div>
-      <button className='language' onClick={() => setLang(lang === 'es' ? 'en' : 'es')}>
+      <button className="language" onClick={() => setLang(lang === 'es' ? 'en' : 'es')}>
             {lang === 'es' ? 'English' : 'Español'}
           </button>
           <div>{t('landing.description')}</div>

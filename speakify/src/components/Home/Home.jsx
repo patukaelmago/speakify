@@ -22,16 +22,15 @@ export default function Home(props) {
   };
 
   return (
-    <div>
-      <h1>{t('h1Text')}</h1>
-      <p>{t('textConvert')}</p>
+    <div className="container">
+            <h1 className="title">Speakify</h1>
+      <p className="description">{t('textConvert')}</p>
+       <button className="button" onClick={handleClick} to="/home">
+        {t('talkButton')}
+      </button>
       <div className="container">
         <textarea id="texto" rows="4" cols="50"></textarea>
       </div>
-
-      <button onClick={handleClick} to="/home">
-        {t('talkButton')}
-      </button>
     </div>
   );
 }

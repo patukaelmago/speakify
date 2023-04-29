@@ -3,11 +3,12 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
 .title {
   font-size: 3rem;
-  color: #333;
+  color: #f1bd0e;
   margin-bottom: 2rem;
 }
 
@@ -18,25 +19,41 @@
 }
 
 .button {
+  font-weight: bold;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #0077ff;
+  color: black;
+  background-color: #f1bd0e;
   padding: 1rem 1rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 160px;
 }
 
 .button:hover {
-  background-color: #0069d9;
+  background-color: rgb(20, 19, 19);
+  color: #f1bd0e;
 }
 
 .language {
-  margin-top: 2em;
-  font-size: 0.9rem;
-}
-button {
+  font-weight: bold;
+  margin-top: 8rem;
+  font-size: 1.2rem;
+  color: black;
+  background-color: #f1bd0e;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   width: 160px;
+  
 }
+
+.language:hover {
+  background-color: rgb(20, 19, 19);
+  color: #f1bd0e;
+}
+
 
