@@ -11,8 +11,8 @@ p {
 }
 
 textarea {
-  width: 80%;
-  height: 8rem;
+  width: 70%;
+  height: 4rem;
   margin: 2rem auto;
   padding: 1rem;
   font-size: 1rem;
@@ -21,7 +21,7 @@ textarea {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   resize: none;
   text-align: center;
-  text-decoration-color: aqua;
+  text-decoration-color: #f1bd0e;
 
 }
 
