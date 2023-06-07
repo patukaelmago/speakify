@@ -21,16 +21,16 @@ export default function Home(props) {
   };
 
   return (
-    <div className="container flex">
-            <h1 className="title text-yellow-500">Speakify</h1>
-      <p className="description">{}</p>
-      <div className="container ">
-        <textarea className="" id="texto" rows="4" cols="20" placeholder="escribir texto"></textarea>
-      </div>
-       <button className="button" onClick={handleClick} to="/">
-        Convertir a Audio
-      </button>
-      
-    </div>
+    <div className="container flex flex-col p-10 items-center">
+  <h1 className="title text-yellow-500">Speakify</h1>
+  <p className="description">{}</p>
+  <div className="container relative">
+    <textarea className="" id="texto" rows="4" cols="50" placeholder="escribir texto"></textarea>
+  </div>
+  <button className="button" onClick={handleClick} to="/">
+    Convertir a Audio
+  </button>
+</div>
+
   );
 }
