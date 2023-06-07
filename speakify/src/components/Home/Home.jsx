@@ -25,7 +25,7 @@ export default function Home(props) {
   <h1 className="title text-yellow-500">Speakify</h1>
   <p className="description">{}</p>
   <div className="container relative">
-    <textarea className="" id="texto" rows="4" cols="50" placeholder="escribir texto"></textarea>
+    <textarea className="block m-auto" id="texto" rows="4" cols="50" placeholder="escribir texto"></textarea>
   </div>
   <button className="button" onClick={handleClick} to="/">
     Convertir a Audio
