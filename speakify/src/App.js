@@ -10,9 +10,9 @@ function App() {
  
   
   return (
-    <div>
+    <div className='flex flex-col items-center'>
     
-          <div>{}</div>
+         
         <Routes>
           
           
