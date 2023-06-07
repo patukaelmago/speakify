@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
-import '../../Languagues/en.json';
-import '../../Languagues/es.json';
+
 
 export default function Home(props) {
      const t = props.t;
@@ -22,15 +21,16 @@ export default function Home(props) {
   };
 
   return (
-    <div className="container">
-            <h1 className="title">Speakify</h1>
-      <p className="description">{t('textConvert')}</p>
-       <button className="button" onClick={handleClick} to="/home">
-        {t('talkButton')}
-      </button>
-      <div className="container">
-        <textarea id="texto" rows="4" cols="50"></textarea>
+    <div className="container flex">
+            <h1 className="title text-yellow-500">Speakify</h1>
+      <p className="description">{}</p>
+      <div className="container ">
+        <textarea className="" id="texto" rows="4" cols="20" placeholder="escribir texto"></textarea>
       </div>
+       <button className="button" onClick={handleClick} to="/">
+        Convertir a Audio
+      </button>
+      
     </div>
   );
 }
