@@ -43,14 +43,14 @@ export default function Home(props) {
         ></textarea>
         <div className="button-container grid gap-2">
           <button
-            className="button w-full active:bg-pink bg-yellow-500 text-black"
+            className="button w-full active:bg-yellow-500 bg-sky-500 text-black"
             onClick={handleConvertClick}
             to="/"
           >
             Escuchar 
           </button>
           <button
-            className="button w-full active:bg-pink bg-yellow-500 text-black"
+            className="button w-full active:bg-pink bg-pink text-black"
             onClick={handleDownloadClick}
           >
             Descargar
