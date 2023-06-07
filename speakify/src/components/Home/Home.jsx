@@ -3,8 +3,8 @@ import "./Home.css";
 
 export default function Home(props) {
   const t = props.t;
-  
-  const handleClick = () => {
+
+  const handleConvertClick = () => {
     let synthesis = window.speechSynthesis;
     let texto = document.getElementById("texto").value;
     let habla = new SpeechSynthesisUtterance(texto);
@@ -17,16 +17,18 @@ export default function Home(props) {
         habla.voiceURI = voices[0].voiceURI;
         clearInterval(timer);
         synthesis.speak(habla);
-        
-        // Crear enlace de descarga del audio
-        const blob = new Blob([texto], { type: "audio/mpeg" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "audio.mp3";
-        link.click();
       }
     });
+  };
+
+  const handleDownloadClick = () => {
+    let texto = document.getElementById("texto").value;
+    const blob = new Blob([texto], { type: "audio/mpeg" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "audio.mp3";
+    link.click();
   };
 
   return (
@@ -39,9 +41,21 @@ export default function Home(props) {
           id="texto"
           placeholder="Escribir texto"
         ></textarea>
-        <button className="button w-full w-auto" onClick={handleClick} to="/">
-          Convertir a Audio
-        </button>
+        <div className="button-container grid gap-2">
+          <button
+            className="button w-full active:bg-pink bg-yellow-500 text-black"
+            onClick={handleConvertClick}
+            to="/"
+          >
+            Escuchar 
+          </button>
+          <button
+            className="button w-full active:bg-pink bg-yellow-500 text-black"
+            onClick={handleDownloadClick}
+          >
+            Descargar
+          </button>
+        </div>
       </div>
     </div>
   );
