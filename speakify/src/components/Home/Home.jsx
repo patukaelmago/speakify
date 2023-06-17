@@ -35,9 +35,9 @@ export default function Home(props) {
     <div className="container flex flex-col p-8 items-center gap-8">
       <h1 className="title text-yellow-500 font-bold text-5xl">Speakify</h1>
       <p className="description">{}</p>
-      <div className="container flex flex-col justify-center items-center">
+      <div className="container flex flex-col justify-center items-center min-w-max">
         <textarea
-          className="textinput h-1/2 lg-4 mb-4 w-full lg:w-1/2 m-auto block"
+          className="textinput h-[30px] lg-4 mb-4 w-full lg:w-full m-auto block text-lg"
           id="texto"
           placeholder="Escribir texto"
         ></textarea>
