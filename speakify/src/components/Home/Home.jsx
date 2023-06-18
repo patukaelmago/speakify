@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 
 export default function Home(props) {
   const t = props.t;
+  const [audioURL, setAudioURL] = useState("");
 
   const handleConvertClick = () => {
     let synthesis = window.speechSynthesis;
@@ -11,7 +12,7 @@ export default function Home(props) {
     habla.lang = "es-ES";
     habla.volume = 1;
     let timer = setInterval(function () {
-      let voices = speechSynthesis.getVoices();
+      let voices = synthesis.getVoices();
       if (voices.length !== 0) {
         habla.voice = voices[0];
         habla.voiceURI = voices[0].voiceURI;
@@ -25,16 +26,24 @@ export default function Home(props) {
     let texto = document.getElementById("texto").value;
     const blob = new Blob([texto], { type: "audio/mpeg" });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "audio.mp3";
-    link.click();
+    setAudioURL(url); // Guardar la URL del audio en el estado
   };
+
+  useEffect(() => {
+    if (audioURL) {
+      const link = document.createElement("a");
+      link.href = audioURL;
+      link.download = "audio.mp3";
+      link.click();
+      URL.revokeObjectURL(audioURL); // Liberar la URL del objeto
+      setAudioURL(""); // Restablecer el estado de la URL del audio
+    }
+  }, [audioURL]);
 
   return (
     <div className="container flex flex-col p-8 items-center gap-8">
       <h1 className="title text-yellow-500 font-bold text-5xl">Speakify</h1>
-      <p className="description">{}</p>
+      <p className="description"></p>
       <div className="container flex flex-col justify-center items-center min-w-max">
         <textarea
           className="textinput h-[70px] lg-4 mb-4 w-full lg:w-full m-auto block text-lg"
@@ -47,7 +56,7 @@ export default function Home(props) {
             onClick={handleConvertClick}
             to="/"
           >
-            Escuchar 
+            Escuchar
           </button>
           <button
             className="button w-full active:bg-pink bg-pink text-black"
@@ -58,8 +67,11 @@ export default function Home(props) {
         </div>
       </div>
       <div className="text-yellow-500">
-              <p className="text-sm mb-md-0">&copy; {new Date().getFullYear()} - Patuka Technologies.<br/> All rights reserved.</p>
-            </div>
+        <p className="text-sm mb-md-0">
+          &copy; {new Date().getFullYear()} - Patuka Technologies.
+          <br /> Todos los derechos reservados.
+        </p>
+      </div>
     </div>
   );
 }
