@@ -58,7 +58,7 @@ export default function Home(props) {
         </div>
       </div>
       <div className="text-yellow-500">
-              <p className="text-sm mb-md-0">&copy; {new Date().getFullYear()} - Patuka Technologies, Speakify. All rights reserved.</p>
+              <p className="text-sm mb-md-0">&copy; {new Date().getFullYear()} - Patuka Technologies.<br/> All rights reserved.</p>
             </div>
     </div>
   );
