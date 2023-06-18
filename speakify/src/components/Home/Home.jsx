@@ -37,7 +37,7 @@ export default function Home(props) {
       <p className="description">{}</p>
       <div className="container flex flex-col justify-center items-center min-w-max">
         <textarea
-          className="textinput h-[30px] lg-4 mb-4 w-full lg:w-full m-auto block text-lg"
+          className="textinput h-[70px] lg-4 mb-4 w-full lg:w-full m-auto block text-lg"
           id="texto"
           placeholder="Escribir texto"
         ></textarea>
