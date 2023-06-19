@@ -29,11 +29,13 @@ export default function Home(props) {
     const blob = new Blob([texto], { type: "audio/mpeg" });
     const url = URL.createObjectURL(blob);
     setAudioURL(url); // Guardar la URL del audio en el estado
+    console.log('url:',url)
   };
 
   useEffect(() => {
     if (audioURL) {
       const link = document.createElement("a");
+      console.log('audio',link)
       link.href = audioURL;
       link.download = "audio.mp3";
       link.click();
@@ -41,6 +43,8 @@ export default function Home(props) {
       setAudioURL(""); // Restablecer el estado de la URL del audio
     }
   }, [audioURL]);
+
+ 
 
   return (
     <div className="container flex flex-col p-8 items-center gap-8">
