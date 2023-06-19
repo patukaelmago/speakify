@@ -46,7 +46,7 @@ export default function Home(props) {
     <div className="container flex flex-col p-8 items-center gap-8">
       <h1 className="title text-yellow-500 font-bold text-5xl">Speakify</h1>
       <p className="description"></p>
-      <div className="container flex flex-col justify-center items-center min-w-max ">
+      <div className="container flex flex-col justify-center items-center min-w-max max-w-lg">
         <textarea
           className="textinput h-[70px] lg-4 mb-4 w-full lg:w-full m-auto block text-lg"
           id="texto"
