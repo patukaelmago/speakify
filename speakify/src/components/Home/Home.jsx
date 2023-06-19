@@ -54,7 +54,8 @@ export default function Home(props) {
         ></textarea>
         <div className="button-container grid gap-2">
           
-            <button className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
+            <button onClick={handleConvertClick}
+            className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
   <span className="mr-2">Escuchar</span>
   <AiFillCustomerService />
 </button>
@@ -62,8 +63,8 @@ export default function Home(props) {
             
           
           
-            <button className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
-  <span className="mr-2">Download</span>
+            <button onClick={handleDownloadClick} className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
+  <span className="mr-2">Descargar</span>
   <BiDownload />
 </button>
 
