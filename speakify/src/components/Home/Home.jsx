@@ -56,7 +56,7 @@ export default function Home(props) {
           id="texto"
           placeholder="Escribir texto"
         ></textarea>
-        <div className="button-container grid gap-2">
+        <div className="button-container flex flex-col gap-2">
           
             <button onClick={handleConvertClick}
             className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
