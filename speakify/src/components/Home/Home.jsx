@@ -29,13 +29,13 @@ export default function Home(props) {
     const blob = new Blob([texto], { type: "audio/mpeg" });
     const url = URL.createObjectURL(blob);
     setAudioURL(url); // Guardar la URL del audio en el estado
-    console.log('url:',url)
+    console.log('url:', url)
   };
 
   useEffect(() => {
     if (audioURL) {
       const link = document.createElement("a");
-      console.log('audio',link)
+      console.log('audio', link)
       link.href = audioURL;
       link.download = "audio.mp3";
       link.click();
@@ -44,7 +44,7 @@ export default function Home(props) {
     }
   }, [audioURL]);
 
- 
+
 
   return (
     <div className="container flex flex-col p-8 items-center gap-8">
@@ -57,22 +57,15 @@ export default function Home(props) {
           placeholder="Escribir texto"
         ></textarea>
         <div className="button-container flex flex-col gap-2">
-          
-            <button onClick={handleConvertClick}
+          <button onClick={handleConvertClick}
             className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
-  <span className="mr-2">Escuchar</span>
-  <AiFillCustomerService />
-</button>
-
-            
-          
-          
-            <button onClick={handleDownloadClick} className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
-  <span className="mr-2">Descargar</span>
-  <BiDownload />
-</button>
-
-          
+            <span className="mr-2">Escuchar</span>
+            <AiFillCustomerService />
+          </button>
+          <button onClick={handleDownloadClick} className="button w-full active:bg-yellow-500 bg-sky-500 text-black flex items-center justify-center">
+            <span className="mr-2">Descargar</span>
+            <BiDownload />
+          </button>
         </div>
       </div>
       <div className="text-yellow-500">
